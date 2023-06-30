@@ -12,6 +12,33 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "extensions-folder",
+          "title": "Extensions Folder",
+          "icon": "media/dep.svg"
+        }
+      ]
+    },
+    "views": {
+      "extensions-folder": [
+        {
+          "id": "extensions-installed",
+          "name": "INSTALLED"
+        },
+        {
+          "id": "extensions-unable",
+          "name": "UNABLE"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "extensions-installed",
+        "contents": "No extensions installed.\n"
+      }
+    ],
     "commands": [
       {
         "command": "vscode-extensions-folder.helloWorld",

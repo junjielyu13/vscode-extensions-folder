@@ -37,12 +37,31 @@
       {
         "view": "extensions-installed",
         "contents": "No extensions installed.\n"
+      },
+      {
+        "view": "extensions-unable",
+        "contents": "No extensions unable.\n"
       }
     ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "vscode-extensions-folder.add",
+          "group": "navigation",
+          "when": "view == extensions-installed"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "vscode-extensions-folder.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vscode-extensions-folder.add",
+        "category": "add extension",
+        "title": "clear extension",
+        "icon": "$(clear-all)"
       }
     ]
   },
